@@ -1,0 +1,108 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "";
+}
+
+
+<div>
+    <h5>Test Your Api Credentials</h5>
+
+    <div class="form-group" style="Display:Flex;">
+        <label class="control-label">Your principal email:</label>
+        <input id="principalEmail" name="principalEmail" class="form-control" placeholder="Your email here" />
+    </div>
+
+    <div class="form-group" style="Display:Flex;">
+        <label class="control-label">Your password:</label>
+        <input id="passwordEmail" name="passwordEmail" class="form-control" placeholder="Your password site here" />
+    </div>
+
+    <button onclick="sendCredentials()">Test credentials</button>
+
+    <div class="form-group" style="Display:Flex;">
+        <label class="control-label">Test Result:</label>
+    </div>
+    <textarea rows="4" cols="50" id="testResult" class="form-control" placeholder="The Json Task Rresponse will be here ! try putting correct credentials and wrong credentials to know how work it" style="resize: none;"></textarea>
+
+
+    <div class="form-group" style="Display:Flex;">
+        <label class="control-label">Json Rows:</label>
+    </div>
+
+    <div class="form-group" style="Display:Flex;">
+        <label class="control-label">Action Caller:</label>
+        <input id="action" name="action" class="form-control" placeholder="Action called" readonly />
+    </div>
+
+    <div class="form-group" style="Display:Flex;">
+        <label class="control-label">Result of call:</label>
+        <input id="result" name="result" class="form-control" placeholder="The result: OK - BAD - ERROR" readonly />
+    </div>
+
+    <div class="form-group" style="Display:Flex;">
+        <label class="control-label">Response or Token:</label>
+        <input id="response" name="response" class="form-control" placeholder="The Token if the credentials it's OK !'" readonly />
+    </div>
+
+
+</div>
+
+<script>
+    async function sendCredentials() {
+        var url = 'userApi/V1/getToken/';
+        var data = {
+            email: document.getElementById("principalEmail").value,
+            password: document.getElementById("passwordEmail").value
+        };
+
+        let credentialResponse = await fetch(url, {
+            method: 'POST', // or 'PUT'
+            body: JSON.stringify(data), // data can be `string` or {object}!
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }).then(response => response.text())
+
+        testResult.innerHTML = "JSON response: " + credentialResponse;
+        let jsonResponse = JSON.parse(credentialResponse);
+
+        action.value = jsonResponse.action;
+        result.value = jsonResponse.result;
+        response.value = jsonResponse.response;
+        
+
+        
+
+
+
+    }
+
+
+
+
+</script>
+
+@*<script>
+    function sendCredentials() {
+        alert('entro');
+        var url = 'userApi/V1/getToken/';
+        var data = {
+            email: document.getElementById("principalEmail").value,
+            password: document.getElementById("passwordEmail").value
+        };
+
+        fetch(url, {
+            method: 'POST', // or 'PUT'
+            body: JSON.stringify(data), // data can be `string` or {object}!
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }).then(response => response.text())
+            .then(text => testResult.innerHTML = "JSON response: " + text)
+
+    }
+
+
+
+
+</script>*@

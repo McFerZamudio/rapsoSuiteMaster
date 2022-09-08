@@ -1,0 +1,1 @@
+https://www.myasp.net/support/kb/a2211/core-to-core-converting-a-framework-dependent-app-to-self-contained-in-visual-studio-2022.aspx

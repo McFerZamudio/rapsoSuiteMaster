@@ -1,0 +1,52 @@
+﻿@model IEnumerable<rapsoSuiteMaster.Models.AspNetUser>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h4>Listado de Usuarios</h4>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                User
+            </th>
+            <th>
+                Principal Communications
+            </th>
+            <th style="text-align:center">
+               Confirmed ?
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserName) <br />
+                    @Html.DisplayFor(modelItem => item.AspNetUserRoles.FirstOrDefault()!.Role.Name)
+                    </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)  <br />
+                    @Html.DisplayFor(modelItem => item.PhoneNumber)
+                </td>
+                <td style="text-align:center">
+                    @Html.DisplayFor(modelItem => item.EmailConfirmed)  <br />
+                    @Html.DisplayFor(modelItem => item.PhoneNumberConfirmed)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

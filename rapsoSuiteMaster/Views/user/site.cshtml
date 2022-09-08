@@ -1,0 +1,53 @@
+﻿@model rapsoSuiteMaster.Models.tbl_site
+
+
+@*<div class="row">*@
+<div style="justify-content:stretch;">
+        <h5>Site Basic Data</h5>
+        <form asp-action="updateSite">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="id_site" />
+             <input type="hidden" asp-for="Id_netUser" />
+            
+            <div class="form-group">
+                <label asp-for="site_name" class="control-label">Site Name</label>
+                <input asp-for="site_name" class="form-control" />
+                <span asp-validation-for="site_name" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group">
+                <label asp-for="site_description" class="control-label">Site Description</label>
+                <textarea asp-for="site_description" class="form-control" cols="40" rows="5" style="overflow:auto;resize:none"></textarea>
+                <span asp-validation-for="site_description" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="site_RapsoSuitesFamily" /> It's a rapsoSuites Family site ?
+                </label>
+            </div>
+            
+            <div class="form-group">
+                <label asp-for="site_nameDeveloper" class="control-label">Name of the developers or responsable person</label>
+                <input asp-for="site_nameDeveloper" class="form-control" />
+                <span asp-validation-for="site_nameDeveloper" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="site_status" /> It's in production (on line to the people of internet?)
+                </label>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+@*</div>*@
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    }

@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph GraphDirection="LeftToRight" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="AspNetRole" Category="EntityType" Annotations="Relational:TableName: AspNetRoles RelationshipDiscoveryConvention:NavigationCandidates: System.Collections.Immutable.ImmutableSortedDictionary`2[System.Reflection.PropertyInfo,System.ValueTuple`2[System.Type,System.Nullable`1[System.Boolean]]]" BaseClass="" Bounds="112.90858306189,372.848382193268,329.213333333333,253.84" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot" Group="Expanded" IsAbstract="False" Label="AspNetRole" Name="AspNetRole" UseManualLocation="True" />
+    <Node Id="AspNetRole.AspNetRoleClaims" Category="Navigation Collection" Bounds="289.565393801788,468.808505530894,132.556666666667,25.96" Dependent="AspNetRoleClaim" Field="" Inverse="Role" Label="AspNetRoleClaims (*)" Name="AspNetRoleClaims" Principal="" PropertyAccessMode="PropertyAccessMode.Default" Type="ICollection&lt;AspNetRoleClaim&gt;" />
+    <Node Id="AspNetRole.AspNetUserRoles" Category="Navigation Collection" Bounds="132.908635684112,468.808505530894,126.656666666667,25.96" Dependent="AspNetUserRole" Field="" Inverse="Role" Label="AspNetUserRoles (*)" Name="AspNetUserRoles" Principal="" PropertyAccessMode="PropertyAccessMode.Default" Type="ICollection&lt;AspNetUserRole&gt;" />
+    <Node Id="AspNetRole.ConcurrencyStamp" Category="Property Optional" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="132.908693565786,580.728534217418,160.52,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="False" IsShadow="False" IsUnicode="True" Label="ConcurrencyStamp (string)" MaxLength="None" Name="ConcurrencyStamp" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="AspNetRole.Id" Category="Property Primary" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="132.908591230174,412.848514075816,70.8833333333333,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="True" IsRequired="True" IsShadow="False" IsUnicode="True" Label="Id (string)" MaxLength="None" Name="Id" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="AspNetRole.Name" Category="Property Optional" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 256" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="233.791934837758,412.848514075816,92.32,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="False" IsShadow="False" IsUnicode="True" Label="Name (string)" MaxLength="(256)" Name="Name" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="AspNetRole.NormalizedName" Category="Property Optional" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 256" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="132.908679019073,524.768573279918,153.526666666667,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="True" IsPrimaryKey="False" IsRequired="False" IsShadow="False" IsUnicode="True" Label="NormalizedName (string)" MaxLength="(256)" Name="NormalizedName" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="AspNetRoleClaim" Category="EntityType" Annotations="Relational:TableName: AspNetRoleClaims RelationshipDiscoveryConvention:NavigationCandidates: System.Collections.Immutable.ImmutableSortedDictionary`2[System.Reflection.PropertyInfo,System.ValueTuple`2[System.Type,System.Nullable`1[System.Boolean]]]" BaseClass="" Bounds="20,40.0000000000002,278.996666666667,197.88" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot" Group="Expanded" IsAbstract="False" Label="AspNetRoleClaim" Name="AspNetRoleClaim" />
+    <Node Id="AspNetRoleClaim.ClaimType" Category="Property Optional" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="163.923333333333,135.96,115.073333333333,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="False" IsShadow="False" IsUnicode="True" Label="ClaimType (string)" MaxLength="None" Name="ClaimType" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="AspNetRoleClaim.ClaimValue" Category="Property Optional" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="40,191.92,118.963333333333,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="False" IsShadow="False" IsUnicode="True" Label="ClaimValue (string)" MaxLength="None" Name="ClaimValue" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="AspNetRoleClaim.Id" Category="Property Primary" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="SqlServer:ValueGenerationStrategy: IdentityColumn" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="40,80.0000000000002,54.55,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="True" IsRequired="True" IsShadow="False" IsUnicode="True" Label="Id (int)" MaxLength="None" Name="Id" PropertyAccessMode="PropertyAccessMode.Default" Type="int" ValueGenerated="ValueGenerated.OnAdd" />
+    <Node Id="AspNetRoleClaim.Role" Category="Navigation Property" Bounds="124.55,80.0000000000002,60.0366666666667,25.96" Dependent="" Field="" Inverse="AspNetRoleClaims" Label="Role (1)" Name="Role" Principal="AspNetRole" PropertyAccessMode="PropertyAccessMode.Default" Type="AspNetRole" />
+    <Node Id="AspNetRoleClaim.RoleId" Category="Property Foreign" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="40,135.96,93.9233333333333,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="True" IsIndexed="True" IsPrimaryKey="False" IsRequired="True" IsShadow="False" IsUnicode="True" Label="RoleId (string)" MaxLength="None" Name="RoleId" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="AspNetUser" Category="EntityType" Annotations="Relational:TableName: AspNetUsers RelationshipDiscoveryConvention:NavigationCandidates: System.Collections.Immutable.ImmutableSortedDictionary`2[System.Reflection.PropertyInfo,System.ValueTuple`2[System.Type,System.Nullable`1[System.Boolean]]]" BaseClass="" Bounds="619.901666666667,283.84,561.193333333333,421.72" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot" Group="Expanded" IsAbstract="False" Label="AspNetUser" Name="AspNetUser" />
+    <Node Id="AspNetUser.AccessFailedCount" Category="Property Required" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="977.431666666667,491.72,142.4,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="True" IsShadow="False" IsUnicode="True" Label="AccessFailedCount (int)" MaxLength="None" Name="AccessFailedCount" PropertyAccessMode="PropertyAccessMode.Default" Type="int" ValueGenerated="None" />
+    <Node Id="AspNetUser.AspNetUserClaims" Category="Navigation Collection" Bounds="802.961666666667,379.8,133.303333333333,25.96" Dependent="AspNetUserClaim" Field="" Inverse="User" Label="AspNetUserClaims (*)" Name="AspNetUserClaims" Principal="" PropertyAccessMode="PropertyAccessMode.Default" Type="ICollection&lt;AspNetUserClaim&gt;" />
+    <Node Id="AspNetUser.AspNetUserLogins" Category="Navigation Collection" Bounds="639.901666666667,379.8,133.06,25.96" Dependent="AspNetUserLogin" Field="" Inverse="User" Label="AspNetUserLogins (*)" Name="AspNetUserLogins" Principal="" PropertyAccessMode="PropertyAccessMode.Default" Type="ICollection&lt;AspNetUserLogin&gt;" />
+    <Node Id="AspNetUser.AspNetUserRoles" Category="Navigation Collection" Bounds="1005.84166666667,323.84,126.656666666667,25.96" Dependent="AspNetUserRole" Field="" Inverse="User" Label="AspNetUserRoles (*)" Name="AspNetUserRoles" Principal="" PropertyAccessMode="PropertyAccessMode.Default" Type="ICollection&lt;AspNetUserRole&gt;" />
+    <Node Id="AspNetUser.AspNetUserTokens" Category="Navigation Collection" Bounds="966.265,379.8,134.793333333333,25.96" Dependent="AspNetUserToken" Field="" Inverse="User" Label="AspNetUserTokens (*)" Name="AspNetUserTokens" Principal="" PropertyAccessMode="PropertyAccessMode.Default" Type="ICollection&lt;AspNetUserToken&gt;" />
+    <Node Id="AspNetUser.ConcurrencyStamp" Category="Property Optional" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="1000.575,547.68,160.52,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="False" IsShadow="False" IsUnicode="True" Label="ConcurrencyStamp (string)" MaxLength="None" Name="ConcurrencyStamp" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="AspNetUser.Email" Category="Property Optional" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 256" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="740.785,323.84,88.95,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="False" IsShadow="False" IsUnicode="True" Label="Email (string)" MaxLength="(256)" Name="Email" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="AspNetUser.EmailConfirmed" Category="Property Required" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="639.901666666667,491.72,138.64,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="True" IsShadow="False" IsUnicode="True" Label="EmailConfirmed (bool)" MaxLength="None" Name="EmailConfirmed" PropertyAccessMode="PropertyAccessMode.Default" Type="bool" ValueGenerated="None" />
+    <Node Id="AspNetUser.Id" Category="Property Primary" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="639.901666666667,323.84,70.8833333333333,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="True" IsRequired="True" IsShadow="False" IsUnicode="True" Label="Id (string)" MaxLength="None" Name="Id" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="AspNetUser.LockoutEnabled" Category="Property Required" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="808.541666666667,491.72,138.89,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="True" IsShadow="False" IsUnicode="True" Label="LockoutEnabled (bool)" MaxLength="None" Name="LockoutEnabled" PropertyAccessMode="PropertyAccessMode.Default" Type="bool" ValueGenerated="None" />
+    <Node Id="AspNetUser.LockoutEnd" Category="Property Optional" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="847.215,603.64,180.573333333333,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="False" IsShadow="False" IsUnicode="True" Label="LockoutEnd (DateTimeOffset?)" MaxLength="None" Name="LockoutEnd" PropertyAccessMode="PropertyAccessMode.Default" Type="DateTimeOffset?" ValueGenerated="None" />
+    <Node Id="AspNetUser.NormalizedEmail" Category="Property Optional" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 256" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="639.901666666667,547.68,150.156666666667,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="True" IsPrimaryKey="False" IsRequired="False" IsShadow="False" IsUnicode="True" Label="NormalizedEmail (string)" MaxLength="(256)" Name="NormalizedEmail" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="AspNetUser.NormalizedUserName" Category="Property Optional" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 256" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="639.901666666667,603.64,177.313333333333,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="True" IsPrimaryKey="False" IsRequired="False" IsShadow="False" IsUnicode="True" Label="NormalizedUserName (string)" MaxLength="(256)" Name="NormalizedUserName" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="AspNetUser.PasswordHash" Category="Property Optional" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="806.011666666667,435.76,136.68,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="False" IsShadow="False" IsUnicode="True" Label="PasswordHash (string)" MaxLength="None" Name="PasswordHash" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="AspNetUser.PhoneNumber" Category="Property Optional" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="972.691666666667,435.76,137.836666666667,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="False" IsShadow="False" IsUnicode="True" Label="PhoneNumber (string)" MaxLength="None" Name="PhoneNumber" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="AspNetUser.PhoneNumberConfirmed" Category="Property Required" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="639.901666666667,659.6,187.526666666667,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="True" IsShadow="False" IsUnicode="True" Label="PhoneNumberConfirmed (bool)" MaxLength="None" Name="PhoneNumberConfirmed" PropertyAccessMode="PropertyAccessMode.Default" Type="bool" ValueGenerated="None" />
+    <Node Id="AspNetUser.SecurityStamp" Category="Property Optional" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="639.901666666667,435.76,136.11,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="False" IsShadow="False" IsUnicode="True" Label="SecurityStamp (string)" MaxLength="None" Name="SecurityStamp" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="AspNetUser.TwoFactorEnabled" Category="Property Required" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="820.058333333334,547.68,150.516666666667,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="True" IsShadow="False" IsUnicode="True" Label="TwoFactorEnabled (bool)" MaxLength="None" Name="TwoFactorEnabled" PropertyAccessMode="PropertyAccessMode.Default" Type="bool" ValueGenerated="None" />
+    <Node Id="AspNetUser.UserName" Category="Property Optional" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 256" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="859.735,323.84,116.106666666667,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="False" IsShadow="False" IsUnicode="True" Label="UserName (string)" MaxLength="(256)" Name="UserName" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="AspNetUserClaim" Category="EntityType" Annotations="Relational:TableName: AspNetUserClaims RelationshipDiscoveryConvention:NavigationCandidates: System.Collections.Immutable.ImmutableSortedDictionary`2[System.Reflection.PropertyInfo,System.ValueTuple`2[System.Type,System.Nullable`1[System.Boolean]]]" BaseClass="" Bounds="550.626666666667,40,279.743333333333,197.88" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot" Group="Expanded" IsAbstract="False" Label="AspNetUserClaim" Name="AspNetUserClaim" />
+    <Node Id="AspNetUserClaim.ClaimType" Category="Property Optional" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="695.296666666667,135.96,115.073333333333,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="False" IsShadow="False" IsUnicode="True" Label="ClaimType (string)" MaxLength="None" Name="ClaimType" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="AspNetUserClaim.ClaimValue" Category="Property Optional" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="570.626666666667,191.92,118.963333333333,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="False" IsShadow="False" IsUnicode="True" Label="ClaimValue (string)" MaxLength="None" Name="ClaimValue" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="AspNetUserClaim.Id" Category="Property Primary" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="SqlServer:ValueGenerationStrategy: IdentityColumn" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="570.626666666667,80,54.5500000000001,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="True" IsRequired="True" IsShadow="False" IsUnicode="True" Label="Id (int)" MaxLength="None" Name="Id" PropertyAccessMode="PropertyAccessMode.Default" Type="int" ValueGenerated="ValueGenerated.OnAdd" />
+    <Node Id="AspNetUserClaim.User" Category="Navigation Property" Bounds="655.176666666667,80,60.7833333333334,25.96" Dependent="" Field="" Inverse="AspNetUserClaims" Label="User (1)" Name="User" Principal="AspNetUser" PropertyAccessMode="PropertyAccessMode.Default" Type="AspNetUser" />
+    <Node Id="AspNetUserClaim.UserId" Category="Property Foreign" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="570.626666666667,135.96,94.67,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="True" IsIndexed="True" IsPrimaryKey="False" IsRequired="True" IsShadow="False" IsUnicode="True" Label="UserId (string)" MaxLength="None" Name="UserId" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="AspNetUserLogin" Category="EntityType" Annotations="Relational:TableName: AspNetUserLogins RelationshipDiscoveryConvention:NavigationCandidates: System.Collections.Immutable.ImmutableSortedDictionary`2[System.Reflection.PropertyInfo,System.ValueTuple`2[System.Type,System.Nullable`1[System.Boolean]]]" BaseClass="" Bounds="860.616666666667,40,327.763333333333,197.88" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot" Group="Expanded" IsAbstract="False" Label="AspNetUserLogin" Name="AspNetUserLogin" />
+    <Node Id="AspNetUserLogin.LoginProvider" Category="Property Primary" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 128" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="1034.22,135.96,134.16,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="True" IsRequired="True" IsShadow="False" IsUnicode="True" Label="LoginProvider (string)" MaxLength="(128)" Name="LoginProvider" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="AspNetUserLogin.ProviderDisplayName" Category="Property Optional" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="880.616666666667,191.92,174.7,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="False" IsShadow="False" IsUnicode="True" Label="ProviderDisplayName (string)" MaxLength="None" Name="ProviderDisplayName" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="AspNetUserLogin.ProviderKey" Category="Property Primary" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 128" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="880.616666666667,135.96,123.603333333333,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="True" IsRequired="True" IsShadow="False" IsUnicode="True" Label="ProviderKey (string)" MaxLength="(128)" Name="ProviderKey" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="AspNetUserLogin.User" Category="Navigation Property" Bounds="880.616666666667,80,60.7833333333333,25.96" Dependent="" Field="" Inverse="AspNetUserLogins" Label="User (1)" Name="User" Principal="AspNetUser" PropertyAccessMode="PropertyAccessMode.Default" Type="AspNetUser" />
+    <Node Id="AspNetUserLogin.UserId" Category="Property Foreign" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="971.4,80,94.67,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="True" IsIndexed="True" IsPrimaryKey="False" IsRequired="True" IsShadow="False" IsUnicode="True" Label="UserId (string)" MaxLength="None" Name="UserId" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="AspNetUserRole" Category="EntityType" Annotations="Relational:TableName: AspNetUserRoles RelationshipDiscoveryConvention:NavigationCandidates: System.Collections.Immutable.ImmutableSortedDictionary`2[System.Reflection.PropertyInfo,System.ValueTuple`2[System.Type,System.Nullable`1[System.Boolean]]]" BaseClass="" Bounds="329.088333333334,40,190.82,197.88" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot" Group="Expanded" IsAbstract="False" Label="AspNetUserRole" Name="AspNetUserRole" />
+    <Node Id="AspNetUserRole.Role" Category="Navigation Property" Bounds="349.088333333334,80,60.0366666666666,25.96" Dependent="" Field="" Inverse="AspNetUserRoles" Label="Role (1)" Name="Role" Principal="AspNetRole" PropertyAccessMode="PropertyAccessMode.Default" Type="AspNetRole" />
+    <Node Id="AspNetUserRole.RoleId" Category="Property Primary" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="349.088333333334,135.96,93.9233333333333,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="True" IsIndexed="True" IsPrimaryKey="True" IsRequired="True" IsShadow="False" IsUnicode="True" Label="RoleId (string)" MaxLength="None" Name="RoleId" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="AspNetUserRole.User" Category="Navigation Property" Bounds="439.125000000001,80,60.7833333333334,25.96" Dependent="" Field="" Inverse="AspNetUserRoles" Label="User (1)" Name="User" Principal="AspNetUser" PropertyAccessMode="PropertyAccessMode.Default" Type="AspNetUser" />
+    <Node Id="AspNetUserRole.UserId" Category="Property Primary" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="349.088333333334,191.92,94.67,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="True" IsIndexed="False" IsPrimaryKey="True" IsRequired="True" IsShadow="False" IsUnicode="True" Label="UserId (string)" MaxLength="None" Name="UserId" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="AspNetUserToken" Category="EntityType" Annotations="" BaseClass="" Bounds="1219.00333333333,40,256.99,197.88" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot" Group="Expanded" IsAbstract="False" Label="AspNetUserToken" Name="AspNetUserToken" />
+    <Node Id="AspNetUserToken.LoginProvider" Category="Property Primary" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 128" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="1239.00333333333,191.92,134.16,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="True" IsRequired="True" IsShadow="False" IsUnicode="True" Label="LoginProvider (string)" MaxLength="(128)" Name="LoginProvider" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="AspNetUserToken.Name" Category="Property Primary" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 128" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="1239.00333333333,135.96,92.3199999999999,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="True" IsRequired="True" IsShadow="False" IsUnicode="True" Label="Name (string)" MaxLength="(128)" Name="Name" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="AspNetUserToken.User" Category="Navigation Property" Bounds="1239.00333333333,80,60.7833333333333,25.96" Dependent="" Field="" Inverse="AspNetUserTokens" Label="User (1)" Name="User" Principal="AspNetUser" PropertyAccessMode="PropertyAccessMode.Default" Type="AspNetUser" />
+    <Node Id="AspNetUserToken.UserId" Category="Property Primary" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="1361.32333333333,135.96,94.6700000000001,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="True" IsIndexed="False" IsPrimaryKey="True" IsRequired="True" IsShadow="False" IsUnicode="True" Label="UserId (string)" MaxLength="None" Name="UserId" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="AspNetUserToken.Value" Category="Property Optional" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="1329.78666666667,80,89.2766666666666,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="False" IsShadow="False" IsUnicode="True" Label="Value (string)" MaxLength="None" Name="Value" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="IModel" Category="Model" Annotations="BaseTypeDiscoveryConvention:DerivedTypes: System.Collections.Generic.Dictionary`2[System.Type,System.Collections.Generic.List`1[Microsoft.EntityFrameworkCore.Metadata.IConventionEntityType]] Relational:MaxIdentifierLength: 128 RelationshipDiscoveryConvention:InverseNavigationCandidates: System.Collections.Generic.Dictionary`2[System.Type,System.Collections.Generic.SortedSet`1[System.Type]] SqlServer:ValueGenerationStrategy: IdentityColumn" Bounds="0,0,1495.99333333333,725.56" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot" Group="Expanded" Label="rapsoServer_DBContext" ProductVersion="6.0.7" PropertyAccessMode="PropertyAccessMode.Default" />
+  </Nodes>
+  <Links>
+    <Link Source="AspNetRole" Target="AspNetRole.AspNetRoleClaims" Category="Contains" />
+    <Link Source="AspNetRole" Target="AspNetRole.AspNetUserRoles" Category="Contains" />
+    <Link Source="AspNetRole" Target="AspNetRole.ConcurrencyStamp" Category="Contains" />
+    <Link Source="AspNetRole" Target="AspNetRole.Id" Category="Contains" />
+    <Link Source="AspNetRole" Target="AspNetRole.Name" Category="Contains" />
+    <Link Source="AspNetRole" Target="AspNetRole.NormalizedName" Category="Contains" />
+    <Link Source="AspNetRoleClaim" Target="AspNetRole" Category="Foreign Key" Annotations="" Bounds="191.858852306836,237.88,41.34659779325,126.414300988617" From="AspNetRoleClaim.RoleId" IsUnique="False" Label="1:*" LabelBounds="216.537316861747,290.939039118229,14.0733333333333,15.96" Name="AspNetRoleClaim -&gt; AspNetRole" To="AspNetRole.Id" />
+    <Link Source="AspNetRoleClaim" Target="AspNetRoleClaim.ClaimType" Category="Contains" />
+    <Link Source="AspNetRoleClaim" Target="AspNetRoleClaim.ClaimValue" Category="Contains" />
+    <Link Source="AspNetRoleClaim" Target="AspNetRoleClaim.Id" Category="Contains" />
+    <Link Source="AspNetRoleClaim" Target="AspNetRoleClaim.Role" Category="Contains" />
+    <Link Source="AspNetRoleClaim" Target="AspNetRoleClaim.RoleId" Category="Contains" />
+    <Link Source="AspNetUser" Target="AspNetUser.AccessFailedCount" Category="Contains" />
+    <Link Source="AspNetUser" Target="AspNetUser.AspNetUserClaims" Category="Contains" />
+    <Link Source="AspNetUser" Target="AspNetUser.AspNetUserLogins" Category="Contains" />
+    <Link Source="AspNetUser" Target="AspNetUser.AspNetUserRoles" Category="Contains" />
+    <Link Source="AspNetUser" Target="AspNetUser.AspNetUserTokens" Category="Contains" />
+    <Link Source="AspNetUser" Target="AspNetUser.ConcurrencyStamp" Category="Contains" />
+    <Link Source="AspNetUser" Target="AspNetUser.Email" Category="Contains" />
+    <Link Source="AspNetUser" Target="AspNetUser.EmailConfirmed" Category="Contains" />
+    <Link Source="AspNetUser" Target="AspNetUser.Id" Category="Contains" />
+    <Link Source="AspNetUser" Target="AspNetUser.LockoutEnabled" Category="Contains" />
+    <Link Source="AspNetUser" Target="AspNetUser.LockoutEnd" Category="Contains" />
+    <Link Source="AspNetUser" Target="AspNetUser.NormalizedEmail" Category="Contains" />
+    <Link Source="AspNetUser" Target="AspNetUser.NormalizedUserName" Category="Contains" />
+    <Link Source="AspNetUser" Target="AspNetUser.PasswordHash" Category="Contains" />
+    <Link Source="AspNetUser" Target="AspNetUser.PhoneNumber" Category="Contains" />
+    <Link Source="AspNetUser" Target="AspNetUser.PhoneNumberConfirmed" Category="Contains" />
+    <Link Source="AspNetUser" Target="AspNetUser.SecurityStamp" Category="Contains" />
+    <Link Source="AspNetUser" Target="AspNetUser.TwoFactorEnabled" Category="Contains" />
+    <Link Source="AspNetUser" Target="AspNetUser.UserName" Category="Contains" />
+    <Link Source="AspNetUserClaim" Target="AspNetUser" Category="Foreign Key" Annotations="" Bounds="748.901184082031,237.880004882813,22.5545654296875,38.2095336914063" From="AspNetUserClaim.UserId" IsUnique="False" Label="1:*" LabelBounds="762.465951952628,252.88,14.0733333333333,15.96" Name="AspNetUserClaim -&gt; AspNetUser" To="AspNetUser.Id" />
+    <Link Source="AspNetUserClaim" Target="AspNetUserClaim.ClaimType" Category="Contains" />
+    <Link Source="AspNetUserClaim" Target="AspNetUserClaim.ClaimValue" Category="Contains" />
+    <Link Source="AspNetUserClaim" Target="AspNetUserClaim.Id" Category="Contains" />
+    <Link Source="AspNetUserClaim" Target="AspNetUserClaim.User" Category="Contains" />
+    <Link Source="AspNetUserClaim" Target="AspNetUserClaim.UserId" Category="Contains" />
+    <Link Source="AspNetUserLogin" Target="AspNetUser" Category="Foreign Key" Annotations="" Bounds="976.955688476563,237.880004882813,13.05712890625,37.46142578125" From="AspNetUserLogin.UserId" IsUnique="False" Label="1:*" LabelBounds="967.929834720036,252.88,14.0733333333334,15.96" Name="AspNetUserLogin -&gt; AspNetUser" To="AspNetUser.Id" />
+    <Link Source="AspNetUserLogin" Target="AspNetUserLogin.LoginProvider" Category="Contains" />
+    <Link Source="AspNetUserLogin" Target="AspNetUserLogin.ProviderDisplayName" Category="Contains" />
+    <Link Source="AspNetUserLogin" Target="AspNetUserLogin.ProviderKey" Category="Contains" />
+    <Link Source="AspNetUserLogin" Target="AspNetUserLogin.User" Category="Contains" />
+    <Link Source="AspNetUserLogin" Target="AspNetUserLogin.UserId" Category="Contains" />
+    <Link Source="AspNetUserRole" Target="AspNetRole" Category="Foreign Key" Annotations="" Bounds="332.611240360269,237.88,51.5839821050641,126.633380886913" From="AspNetUserRole.RoleId" IsUnique="False" Label="1:*" LabelBounds="360.255453925324,301.951191446837,14.0733333333333,15.96" Name="AspNetUserRole -&gt; AspNetRole" To="AspNetRole.Id" />
+    <Link Source="AspNetUserRole" Target="AspNetUser" Category="Foreign Key" Annotations="" Bounds="519.908325195313,218.336380004883,92.7369995117188,69.9503936767578" From="AspNetUserRole.UserId" IsUnique="False" Label="1:*" LabelBounds="587.460582453674,253.101193831375,14.0733333333333,15.96" Name="AspNetUserRole -&gt; AspNetUser" To="AspNetUser.Id" />
+    <Link Source="AspNetUserRole" Target="AspNetUserRole.Role" Category="Contains" />
+    <Link Source="AspNetUserRole" Target="AspNetUserRole.RoleId" Category="Contains" />
+    <Link Source="AspNetUserRole" Target="AspNetUserRole.User" Category="Contains" />
+    <Link Source="AspNetUserRole" Target="AspNetUserRole.UserId" Category="Contains" />
+    <Link Source="AspNetUserToken" Target="AspNetUser" Category="Foreign Key" Annotations="" Bounds="1172.478515625,237.823608398438,50.7760009765625,40.4118347167969" From="AspNetUserToken.UserId" IsUnique="False" Label="1:*" LabelBounds="1180.23678322465,252.88,14.0733333333333,15.96" Name="AspNetUserToken -&gt; AspNetUser" To="AspNetUser.Id" />
+    <Link Source="AspNetUserToken" Target="AspNetUserToken.LoginProvider" Category="Contains" />
+    <Link Source="AspNetUserToken" Target="AspNetUserToken.Name" Category="Contains" />
+    <Link Source="AspNetUserToken" Target="AspNetUserToken.User" Category="Contains" />
+    <Link Source="AspNetUserToken" Target="AspNetUserToken.UserId" Category="Contains" />
+    <Link Source="AspNetUserToken" Target="AspNetUserToken.Value" Category="Contains" />
+    <Link Source="IModel" Target="AspNetRole" Category="Contains" />
+    <Link Source="IModel" Target="AspNetRoleClaim" Category="Contains" />
+    <Link Source="IModel" Target="AspNetUser" Category="Contains" />
+    <Link Source="IModel" Target="AspNetUserClaim" Category="Contains" />
+    <Link Source="IModel" Target="AspNetUserLogin" Category="Contains" />
+    <Link Source="IModel" Target="AspNetUserRole" Category="Contains" />
+    <Link Source="IModel" Target="AspNetUserToken" Category="Contains" />
+  </Links>
+  <Categories>
+    <Category Id="Contains" Label="Contains" Description="Whether the source of the link contains the target object" CanBeDataDriven="False" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Contained By" IsContainment="True" OutgoingActionLabel="Contains" />
+    <Category Id="EntityType" />
+    <Category Id="Foreign Key" />
+    <Category Id="Model" />
+    <Category Id="Navigation Collection" />
+    <Category Id="Navigation Property" />
+    <Category Id="Property Foreign" />
+    <Category Id="Property Optional" />
+    <Category Id="Property Primary" />
+    <Category Id="Property Required" />
+  </Categories>
+  <Properties>
+    <Property Id="AfterSaveBehavior" Group="Property Flags" DataType="System.String" />
+    <Property Id="Annotations" Description="Annotations" Group="Model Properties" DataType="System.String" />
+    <Property Id="BaseClass" Description="Base class" Group="Model Properties" DataType="System.String" />
+    <Property Id="BeforeSaveBehavior" Group="Property Flags" DataType="System.String" />
+    <Property Id="Bounds" DataType="System.Windows.Rect" />
+    <Property Id="CanBeDataDriven" Label="CanBeDataDriven" Description="CanBeDataDriven" DataType="System.Boolean" />
+    <Property Id="CanLinkedNodesBeDataDriven" Label="CanLinkedNodesBeDataDriven" Description="CanLinkedNodesBeDataDriven" DataType="System.Boolean" />
+    <Property Id="ChangeTrackingStrategy" Description="Change tracking strategy" Group="Model Properties" DataType="System.String" />
+    <Property Id="Dependent" Description="Dependent entity" Group="Model Properties" DataType="System.String" />
+    <Property Id="Expression" DataType="System.String" />
+    <Property Id="Field" Description="Backing field" Group="Model Properties" DataType="System.String" />
+    <Property Id="From" Description="Target property" Group="Model Properties" DataType="System.String" />
+    <Property Id="GraphDirection" DataType="Microsoft.VisualStudio.Diagrams.Layout.LayoutOrientation" />
+    <Property Id="Group" Label="Group" Description="Display the node as a group" DataType="Microsoft.VisualStudio.GraphModel.GraphGroupStyle" />
+    <Property Id="GroupLabel" DataType="System.String" />
+    <Property Id="IncomingActionLabel" Label="IncomingActionLabel" Description="IncomingActionLabel" DataType="System.String" />
+    <Property Id="Inverse" Description="Inverse entity" Group="Model Properties" DataType="System.String" />
+    <Property Id="IsAbstract" Label="IsAbstract" Description="IsAbstract" Group="Model Properties" DataType="System.Boolean" />
+    <Property Id="IsAlternateKey" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsConcurrencyToken" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsContainment" DataType="System.Boolean" />
+    <Property Id="IsEnabled" DataType="System.Boolean" />
+    <Property Id="IsForeignKey" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsIndexed" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsPrimaryKey" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsRequired" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsShadow" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsUnicode" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsUnique" Group="Model Properties" DataType="System.Boolean" />
+    <Property Id="Label" Label="Label" Description="Displayable label of an Annotatable object" DataType="System.String" />
+    <Property Id="LabelBounds" DataType="System.Windows.Rect" />
+    <Property Id="MaxLength" DataType="System.String" />
+    <Property Id="Name" Group="Model Properties" DataType="System.String" />
+    <Property Id="OutgoingActionLabel" Label="OutgoingActionLabel" Description="OutgoingActionLabel" DataType="System.String" />
+    <Property Id="Principal" Description="Principal entity" Group="Model Properties" DataType="System.String" />
+    <Property Id="ProductVersion" Label="Product Version" Description="EF Core product version" Group="Model Properties" DataType="System.String" />
+    <Property Id="PropertyAccessMode" Group="Property Flags" DataType="System.String" />
+    <Property Id="TargetType" DataType="System.Type" />
+    <Property Id="To" Description="Source property" Group="Model Properties" DataType="System.String" />
+    <Property Id="Type" Description="CLR data type" Group="Model Properties" DataType="System.String" />
+    <Property Id="UseManualLocation" DataType="System.Boolean" />
+    <Property Id="Value" DataType="System.String" />
+    <Property Id="ValueGenerated" Group="Property Flags" DataType="System.String" />
+    <Property Id="ValueLabel" DataType="System.String" />
+  </Properties>
+  <Styles>
+    <Style TargetType="Node" GroupLabel="EntityType" ValueLabel="True">
+      <Condition Expression="HasCategory('EntityType')" />
+      <Setter Property="Background" Value="#FFC0C0C0" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Property Primary" ValueLabel="True">
+      <Condition Expression="HasCategory('Property Primary')" />
+      <Setter Property="Background" Value="#FF008000" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Property Optional" ValueLabel="True">
+      <Condition Expression="HasCategory('Property Optional')" />
+      <Setter Property="Background" Value="#FF808040" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Property Foreign" ValueLabel="True">
+      <Condition Expression="HasCategory('Property Foreign')" />
+      <Setter Property="Background" Value="#FF8080FF" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Property Required" ValueLabel="True">
+      <Condition Expression="HasCategory('Property Required')" />
+      <Setter Property="Background" Value="#FFC0A000" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Navigation Property" ValueLabel="True">
+      <Condition Expression="HasCategory('Navigation Property')" />
+      <Setter Property="Background" Value="#FF990000" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Navigation Collection" ValueLabel="True">
+      <Condition Expression="HasCategory('Navigation Collection')" />
+      <Setter Property="Background" Value="#FFFF3232" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Model" ValueLabel="True">
+      <Condition Expression="HasCategory('Model')" />
+      <Setter Property="Background" Value="#FFFFFFFF" />
+    </Style>
+  </Styles>
+</DirectedGraph>
