@@ -63,7 +63,12 @@
             }
         }).then(response => response.text())
 
-        testResult.innerHTML = "JSON response: " + credentialResponse;
+
+
+        testResult.innerHTML = "<strong>API called : " + url + "</strong>";
+        testResult.innerHTML += "JSON response: " + credentialResponse;
+        testResult.innerHTML += 'We can dynamically change the HTML. We can even include HTML elements like <a href="#">this link</a>.';
+
         let jsonResponse = JSON.parse(credentialResponse);
 
         action.value = jsonResponse.action;

@@ -93,7 +93,7 @@ namespace rapsoSuiteMaster.WebApi
 
         #endregion
 
-        #region "aprendizaje"
+        #region "Aprendizaje"
         [AllowAnonymous]
         [HttpGet("leeApi")]
         public async Task<string> leeApi()

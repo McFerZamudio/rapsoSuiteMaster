@@ -74,7 +74,7 @@ namespace rapsoSuiteMaster.Controllers.Admin
                 userRapsoSuites _usuario = new("administrator@rapsosuites.com", "Pn.14024284.Fm");
                 StringContent _stringContentLogin = new StringContent(_usuario.jsonResponse());
 
-                resultContent = _comunicationServices.callApiJson("getToken", _stringContentLogin, "/userApi/V1/getToken", "", "").Result;
+                resultContent = _comunicationServices.callApiJson("getToken", _stringContentLogin, "/userApi/V1/getToken2", "", "").Result;
 
                 if (resultContent.result == "Ok")
                 {
